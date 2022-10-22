@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root {
+  --purple: #ff64fb;
+  --dark-purple: #9b0eff;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Containers */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h1, .container p {
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  font-size: xx-large;
+  color: black;
+}
+.knows.html {
+  color: #E44D26;
+}
+.knows.css {
+  color: #48A0DC;
+}
+.knows.lua {
+  color: #000081;
+}
+.knows.js {
+  color: #F7E018;
+}
+/* Containers End */
+/* Cursor */
+#custom-cursor {
+  height: 20px;
+  width: 20px;
+  background-color: rgba(0, 0, 0, 0.566);
+  border-radius: 20px;
+  
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 9999999;
+  
+  color: black;
+  
+  filter: blur(2px);
+
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+
+body:hover > #custom-cursor {
+  opacity: 1;
+}
+/* Cursor End */
+/* No Select */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+/* No Select End */
+/* Nav */
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(43deg, rgba(65,167,255,1) 0%, rgba(255,100,251,1) 100%);
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 300ms cubic-bezier(.82,0,.4,1);
+}
+#nav:checked ~ .nav-wrapper{
+  clip-path: circle(75%);
+}
+.menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 2;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 500ms ease-out;
+  background: linear-gradient(43deg, rgba(65,167,255,1) 0%, rgba(255,100,251,1) 100%);
+}
+#nav:checked ~ .menu-btn {
+  background: #fff;
+  color: var(--dark-purple);
+}
+#nav:checked ~ .menu-btn i::before {
+  content: '\f00d';
+}
+.nav-wrapper ul {
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.nav-wrapper ul li {
+  margin: 15px 0;
+}
+.nav-wrapper ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 5px 50px;
+  position: relative;
+  line-height: 50px;
+  transition: 0.2s;
+  transition: all 300ms ease;
+}
+.nav-wrapper ul li a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 300ms ease;
+  z-index: -1;
+}
+.nav-wrapper ul li a:hover:after {
+  transform: scaleX(1);
+}
+.nav-wrapper ul li a:hover {
+  color: var(--purple);
+}
+input {
+  display: none;
+}
+/* End Nav */
+/* Link */
+.link {
+  text-decoration: none;
+  color: black;
+}
+.contact-icons i {
+  font-size: x-large;
+  color: var(--dark-purple);
+  transition: color 300ms ease;
+}
+.contact-icons i:hover {
+  color: #730fbb;
+}
+.color.yt {
+  color: #FF0000;
+}
