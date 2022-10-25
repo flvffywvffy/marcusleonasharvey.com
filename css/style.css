@@ -1,0 +1,42 @@
+:root {
+    --font-family: 'Roboto', sans-serif;
+    /* Colours */
+    --white: #fff;
+    --black: #000;
+    --main: #0288D1;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--font-family);
+    color: var(--black);
+}
+.container#top {
+    height: 50vh;
+
+    font-family: var(--font-family);
+    color: var(--white);
+    background-color: var(--main);
+}
+.container#top h1 {
+    font-size: clamp(1rem, 15vw, 3rem);
+    line-height: 0.5rem;
+}
+.container#top p .top-you {
+    font-size: clamp(0.5rem, 5vw, 1.5rem);
+}
+
+.container .projects-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+}
